@@ -173,6 +173,9 @@ impl Contract {
             !auction.participants.contains_key(&account_id),
             "You have Already bid"
         );
+        let mut token = self.token_by_id.get(&auction.token_id).unwrap();
+        token.is_active = false;
+        self.token_by_id.insert(&auction.token_id, &token);
 
         auction.participants.insert(account_id, amount);
         self.auction_by_id.insert(&auction_id, &auction);
