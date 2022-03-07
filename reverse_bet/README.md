@@ -12,13 +12,13 @@ Install Rust https://rustup.rs/
  
 ## Demo
 ### 1. Setup Account
-> ID_MASTER=duonghb2.testnet
+> ID_MASTER=your_master_acc.testnet
 > 
-> ID1=anna.$ID_MASTER
+> ID1=sub_acc1.$ID_MASTER
 > 
-> ID2=bob.$ID_MASTER
+> ID2=sub_acc2.$ID_MASTER
 > 
-> ID3=alice.$ID_MASTER
+> ID3=sub_acc3.$ID_MASTER
 
 #### Create: 
 > near create-account $ID1 --masterAccount $ID_MASTER --initialBalance 10
